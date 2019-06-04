@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FunApp.Web.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -12,6 +11,8 @@ using Newtonsoft.Json;
 
 namespace FunApp.Web.Areas.Identity.Pages.Account.Manage
 {
+    using FunApp.Models;
+
     public class DownloadPersonalDataModel : PageModel
     {
         private readonly UserManager<FunAppUser> _userManager;

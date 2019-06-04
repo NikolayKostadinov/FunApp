@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FunApp.Web.Areas.Identity.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +9,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FunApp.Web.Areas.Identity.Pages.Account.Manage
 {
+    using FunApp.Models;
+
     public class ExternalLoginsModel : PageModel
     {
         private readonly UserManager<FunAppUser> _userManager;

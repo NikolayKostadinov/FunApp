@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using FunApp.Web.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -7,6 +6,8 @@ using Microsoft.Extensions.Logging;
 
 namespace FunApp.Web.Areas.Identity.Pages.Account.Manage
 {
+    using FunApp.Models;
+
     public class PersonalDataModel : PageModel
     {
         private readonly UserManager<FunAppUser> _userManager;

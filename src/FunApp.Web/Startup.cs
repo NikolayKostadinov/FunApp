@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -15,14 +10,17 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace FunApp.Web
 {
-    using Areas.Identity.Data;
-    using Models;
+    using System;
+    using Data;
+    using FunApp.Models;
 
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private readonly IHostingEnvironment env;
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
+            this.env = env ?? throw new ArgumentNullException(nameof(env));
         }
 
         public IConfiguration Configuration { get; }
@@ -37,13 +35,25 @@ namespace FunApp.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<FunAppWebContext>(options =>
+            services.AddDbContext<FunAppContext>(options =>
                 options.UseSqlServer(
-                    this.Configuration.GetConnectionString("FunAppWebContextConnection")));
+                    this.Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDefaultIdentity<FunAppUser>()
+            services.AddDefaultIdentity<FunAppUser>(options =>
+                {
+                    if (this.env.IsDevelopment())
+                    {
+                        options.Password.RequireDigit = false;
+                        options.Password.RequireLowercase = false;
+                        options.Password.RequireNonAlphanumeric = false;
+                        options.Password.RequireUppercase = false;
+                        options.Password.RequireNonAlphanumeric = false;
+                        options.Password.RequiredLength = 6;
+                        options.Password.RequiredUniqueChars = 0;
+                    }
+                })
                 .AddDefaultUI(UIFramework.Bootstrap4)
-                .AddEntityFrameworkStores<FunAppWebContext>();
+                .AddEntityFrameworkStores<FunAppContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
