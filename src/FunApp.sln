@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunApp.Data", "FunApp.Data\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunApp.Models", "FunApp.Models\FunApp.Models.csproj", "{7A40796E-BC23-4EFD-8860-3452BCC26891}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0F93BF19-3323-4495-A485-EE87494E0A6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0D2EA5CB-6718-4B6C-87D0-D2483AE3BDC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SаndBox", "..\tests\SаndBox.csproj", "{19A88613-D41D-4C41-822E-D228924C9992}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +33,19 @@ Global
 		{7A40796E-BC23-4EFD-8860-3452BCC26891}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A40796E-BC23-4EFD-8860-3452BCC26891}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A40796E-BC23-4EFD-8860-3452BCC26891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A88613-D41D-4C41-822E-D228924C9992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A88613-D41D-4C41-822E-D228924C9992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A88613-D41D-4C41-822E-D228924C9992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A88613-D41D-4C41-822E-D228924C9992}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8E752F44-3ABA-493E-84FB-0E483E9E1981} = {0D2EA5CB-6718-4B6C-87D0-D2483AE3BDC7}
+		{557B7594-9E72-4EAA-9B31-1AD048667DDC} = {0D2EA5CB-6718-4B6C-87D0-D2483AE3BDC7}
+		{7A40796E-BC23-4EFD-8860-3452BCC26891} = {0D2EA5CB-6718-4B6C-87D0-D2483AE3BDC7}
+		{19A88613-D41D-4C41-822E-D228924C9992} = {0F93BF19-3323-4495-A485-EE87494E0A6F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EAF76FFD-3BE6-4D07-B98B-DCA751CAA031}
