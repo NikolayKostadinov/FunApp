@@ -1,0 +1,21 @@
+﻿@model FunApp.Services.Models.Home.IndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    @foreach (var joke in Model.Jokes)
+    {
+        <div class="col-md-4 mt-4">
+            <div class="card clearfix">
+                <div class="card-header">
+                    <h5 class="card-title">@joke.CategoryName</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">@Html.Raw(joke.Content)</p>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>

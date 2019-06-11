@@ -15,8 +15,9 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\FunApp.Data\FunApp.Data.csproj" />
-    <ProjectReference Include="..\FunApp.Models\FunApp.Models.csproj" />
+    <ProjectReference Include="..\..\Data\FunApp.Data.Models\FunApp.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Data\FunApp.Data\FunApp.Data.csproj" />
+    <ProjectReference Include="..\..\Services\FunApp.Services.DataServices\FunApp.Services.DataServices.csproj" />
   </ItemGroup>
 
 </Project>

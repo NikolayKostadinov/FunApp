@@ -12,7 +12,9 @@ namespace FunApp.Web
 {
     using System;
     using Data;
+    using Data.Common;
     using FunApp.Models;
+    using Services.DataServices;
 
     public class Startup
     {
@@ -56,6 +58,10 @@ namespace FunApp.Web
                 .AddEntityFrameworkStores<FunAppContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            // Application services
+            services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
+            services.AddScoped<IJokesService, JokesService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

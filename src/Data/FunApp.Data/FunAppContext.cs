@@ -10,6 +10,7 @@ namespace FunApp.Data
 {
     #region Using
 
+    using FunApp.Models;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
     using Models;
@@ -22,6 +23,10 @@ namespace FunApp.Data
             : base(options)
         {
         }
+
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Joke> Jokes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

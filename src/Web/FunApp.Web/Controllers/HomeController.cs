@@ -4,11 +4,27 @@ using FunApp.Web.Models;
 
 namespace FunApp.Web.Controllers
 {
+    using System;
+    using System.Linq;
+    using Data.Common;
+    using FunApp.Models;
+    using Services.DataServices;
+    using Services.Models.Home;
+
     public class HomeController : Controller
     {
+        private IJokesService jokesService;
+
+        public HomeController(IJokesService jokesService)
+        {
+            this.jokesService = jokesService ?? throw new ArgumentNullException(nameof(jokesService));
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var jokes = this.jokesService.GetRandomeJokes(20);
+            var viewModel = new IndexViewModel() { Jokes = jokes };
+            return View(viewModel);
         }
 
         public IActionResult Privacy()
