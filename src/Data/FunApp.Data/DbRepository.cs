@@ -18,7 +18,7 @@ namespace FunApp.Data
         where TEntity : class
     {
         private readonly FunAppContext context;
-        private DbSet<TEntity> dbSet;
+        private readonly DbSet<TEntity> dbSet;
 
         public DbRepository(FunAppContext context)
         {

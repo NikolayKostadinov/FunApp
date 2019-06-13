@@ -8,6 +8,12 @@ namespace FunApp.Models
 
     public class Category:BaseModel<int>
     {
+        public Category()
+        {
+            Jokes = new HashSet<Joke>();
+        }
+
         public string Name { get; set; }
+        public virtual ICollection<Joke> Jokes { get; set; }
     }
 }

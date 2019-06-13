@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using FunApp.Web.Models;
 
 namespace FunApp.Web.Controllers
 {
@@ -9,11 +8,12 @@ namespace FunApp.Web.Controllers
     using Data.Common;
     using FunApp.Models;
     using Services.DataServices;
+    using Services.Models;
     using Services.Models.Home;
 
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        private IJokesService jokesService;
+        private readonly IJokesService jokesService;
 
         public HomeController(IJokesService jokesService)
         {

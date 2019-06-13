@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunApp.Data.Common", "Data\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{60B7FDA8-E4FC-4348-A3AE-F5F37D65E43B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunApp.Services.DataServices", "Services\FunApp.Services.DataServices\FunApp.Services.DataServices.csproj", "{6ACA5632-3994-497E-8303-0B358BE70075}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunApp.Services.DataServices", "Services\FunApp.Services.DataServices\FunApp.Services.DataServices.csproj", "{6ACA5632-3994-497E-8303-0B358BE70075}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunApp.Services.Models", "FunApp.Services.Models\FunApp.Services.Models.csproj", "{64298647-F04C-4FB0-ABE0-8465379CA22F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunApp.Services.Models", "FunApp.Services.Models\FunApp.Services.Models.csproj", "{64298647-F04C-4FB0-ABE0-8465379CA22F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunApp.Services.Mapping", "FunApp.Services.Mapping\FunApp.Services.Mapping.csproj", "{46015893-4984-454D-B3CF-B310844DFB2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{64298647-F04C-4FB0-ABE0-8465379CA22F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64298647-F04C-4FB0-ABE0-8465379CA22F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64298647-F04C-4FB0-ABE0-8465379CA22F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46015893-4984-454D-B3CF-B310844DFB2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46015893-4984-454D-B3CF-B310844DFB2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46015893-4984-454D-B3CF-B310844DFB2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46015893-4984-454D-B3CF-B310844DFB2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{60B7FDA8-E4FC-4348-A3AE-F5F37D65E43B} = {0D2EA5CB-6718-4B6C-87D0-D2483AE3BDC7}
 		{6ACA5632-3994-497E-8303-0B358BE70075} = {60B7FDA8-E4FC-4348-A3AE-F5F37D65E43B}
 		{64298647-F04C-4FB0-ABE0-8465379CA22F} = {60B7FDA8-E4FC-4348-A3AE-F5F37D65E43B}
+		{46015893-4984-454D-B3CF-B310844DFB2D} = {60B7FDA8-E4FC-4348-A3AE-F5F37D65E43B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EAF76FFD-3BE6-4D07-B98B-DCA751CAA031}

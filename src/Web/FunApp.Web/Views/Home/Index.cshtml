@@ -1,4 +1,4 @@
-﻿@model FunApp.Services.Models.Home.IndexViewModel
+﻿@model IndexViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -13,6 +13,7 @@
                 </div>
                 <div class="card-body">
                     <p class="card-text">@Html.Raw(joke.Content)</p>
+                    <a class="btn btn-info btn-sm" asp-action="Details" asp-controller="Jokes" asp-route-id="@joke.Id">see more...</a>
                 </div>
             </div>
         </div>
